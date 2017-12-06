@@ -2,6 +2,7 @@ $(document).ready(function(){
   $("#theForm").submit(function() {
     debugger;
     event.preventDefault();
+    $("#result").empty();
     var number = parseInt($("input#number").val());
     var primes = [];
     console.log(number);
@@ -20,6 +21,7 @@ $(document).ready(function(){
         }
       }
     }
-    alert(primes.join(", "));
+    var result = primes.join(", ");
+    $("#result").append(result);
   })
 })
